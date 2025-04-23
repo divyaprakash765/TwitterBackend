@@ -1,10 +1,11 @@
 import express from "express";
 import connect from "./config/database.js";
 import Tweet from "./models/tweet.js";
+import serverConfig from "./config/serverConfig.js";
 
 const app = express();
 
-app.listen(3000,async ()=>{
+app.listen(serverConfig.PORT,async ()=>{
     console.log("serever is running on port: 3000");
     // mongo db collection establishment
     connect();
@@ -18,8 +19,5 @@ app.listen(3000,async ()=>{
         comment: "This is my first comment" 
     });
 
-    // create a model
-
-    // create a document
     
 })

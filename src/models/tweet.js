@@ -1,9 +1,9 @@
 import { ObjectId } from "bson";
 import mongoose from "mongoose";
 
-const { schema } = mongoose;
+const { Schema } = mongoose;
 
-const tweetSchema = new mongoose.Schema({
+const tweetSchema = new Schema({
     content : {
         type: String
     },
